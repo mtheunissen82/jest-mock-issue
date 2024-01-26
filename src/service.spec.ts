@@ -4,6 +4,8 @@ import { someServiceCall } from './service';
 jest.mock('axios');
 
 const axiosMock = jest.mocked(axios);
+// Or alternatively, you could use this to get the mock typings on axios.
+// const axiosMock = axios as jest.Mocked<typeof axios>;
 
 axiosMock.create.mockReturnValue({
   get: jest.fn().mockResolvedValue({ status: 200, data: 'mocked response' }),
