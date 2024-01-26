@@ -17,7 +17,7 @@ axiosMock.create.mockReturnValue({
 // import { someServiceCall } from './service';
 
 describe('Service', () => {
-  it('should delegate service call to axios and return the result', () => {
-    expect(someServiceCall()).toEqual('Result from call is: mocked response');
+  it('should delegate service call to axios and return the result', async () => {
+    expect(await someServiceCall()).toEqual('Result from call is: mocked response');
   });
 });
